@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#120d09">
+  <meta name="description" content="回望长征路：纪念红军长征胜利90周年互动H5">
+  <title>回望长征路｜纪念红军长征胜利90周年</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#chapter-1">跳到正文</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="read-progress" aria-hidden="true"><i id="readProgress"></i></div>
+
+  <header class="site-head" id="siteHead">
+    <button class="brand" type="button" data-target="cover" aria-label="回到封面">
+      <span class="brand__seal">征</span>
+      <span class="brand__copy">
+        <b>回望长征路</b>
+        <small>1936 — 2026 · 90周年</small>
+      </span>
+    </button>
+    <div class="site-head__right">
+      <span class="chapter-readout" id="chapterReadout" aria-live="polite">序章 · 山河回响</span>
+      <button class="menu-button" id="menuButton" type="button" aria-controls="chapterDrawer" aria-expanded="false">
+        <span>目录</span>
+        <i></i><i></i>
+      </button>
+    </div>
+  </header>
+
+  <aside class="chapter-drawer" id="chapterDrawer" aria-hidden="true">
+    <div class="drawer-scrim" data-close-drawer></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-top">
+        <div>
+          <p class="eyebrow">CONTENTS · 八章</p>
+          <h2 id="drawerTitle">沿长征路，继续向前</h2>
+        </div>
+        <button class="icon-close" type="button" data-close-drawer aria-label="关闭目录">×</button>
+      </div>
+      <nav class="drawer-nav" aria-label="章节目录">
+        <button type="button" data-target="cover"><b>序</b><span>山河回响<small>封面 · 开启回望</small></span></button>
+        <button type="button" data-target="chapter-1"><b>01</b><span>回望长征路<small>时间 · 记忆 · 出发</small></span></button>
+        <button type="button" data-target="chapter-2"><b>02</b><span>为什么出发<small>历史背景 · 战略转移</small></span></button>
+        <button type="button" data-target="chapter-3"><b>03</b><span>二万五千里<small>路线地图 · 11 个节点</small></span></button>
+        <button type="button" data-target="chapter-4"><b>04</b><span>战士画像<small>人数 · 年龄 · 队伍</small></span></button>
+        <button type="button" data-target="chapter-5"><b>05</b><span>她们的长征<small>六位女红军 · 人物舞台</small></span></button>
+        <button type="button" data-target="chapter-6"><b>06</b><span>当代长征<small>精神 · 塞罕坝 · 逆行</small></span></button>
+        <button type="button" data-target="chapter-7"><b>07</b><span>精神不息<small>AI 影像 · 观后一问</small></span></button>
+        <button type="button" data-target="chapter-8"><b>08</b><span>走好新长征<small>宣言 · 寄语 · 再出发</small></span></button>
+      </nav>
+      <p class="drawer-note">纵向漫游，也可以随时从目录抵达任意章节。</p>
+    </div>
+  </aside>
+
+  <nav class="chapter-rail" id="chapterRail" aria-label="快速定位章节"></nav>
+
+  <main id="app">
+    <section class="cover" id="cover" data-chapter="0" data-label="序章 · 山河回响" aria-labelledby="coverTitle">
+      <div class="cover__stars" id="embers" aria-hidden="true"></div>
+      <div class="cover__sun" aria-hidden="true"></div>
+      <svg class="cover__ridge cover__ridge--back" viewBox="0 0 700 390" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 310L70 245 130 280 205 182 278 260 351 145 418 230 500 126 590 220 700 176V390H0Z"/>
+      </svg>
+      <svg class="cover__ridge cover__ridge--front" viewBox="0 0 700 360" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 322L85 242 146 292 230 205 302 276 395 196 468 270 560 210 700 292V360H0Z"/>
+      </svg>
+      <div class="cover__route" aria-hidden="true">
+        <svg viewBox="0 0 360 640" preserveAspectRatio="none">
+          <path d="M322 586C288 546 304 516 264 494S228 450 242 411 205 354 178 326 129 263 118 213 92 141 56 90"/>
+        </svg>
+      </div>
+
+      <div class="cover__content">
+        <p class="cover__kicker">1934.10 — 1936.10</p>
+        <h1 id="coverTitle">回望长征路</h1>
+        <p class="cover__dedication">纪念红军长征胜利 <b>90</b> 周年</p>
+        <div class="cover__rule"><i></i><span>二万五千里</span><i></i></div>
+        <p class="cover__quote">他们走过的不只是路，<br>是一个民族最难的拐点。</p>
+        <button class="primary-button" type="button" data-target="chapter-1">
+          <span>开启回望</span><i>↓</i>
+        </button>
+      </div>
+
+      <div class="cover__footer">
+        <span>向下滑动</span>
+        <i></i><i></i><i></i>
+      </div>
+    </section>
+
+    <section class="chapter chapter-return" id="chapter-1" data-chapter="1" data-label="01 · 回望长征路" aria-labelledby="title-1">
+      <div class="chapter-number" aria-hidden="true">01</div>
+      <div class="shell">
+        <header class="chapter-head reveal">
+          <p class="eyebrow">REVIEW THE LONG MARCH</p>
+          <h2 class="chapter-title" id="title-1">以时间，开启一场回望</h2>
+          <p class="chapter-lead">从江西的渡口到陕北的窑洞，两年时间，一条红线穿过中国最深的山河。先不急着赶路，从一组年份开始，把这段历史重新展开。</p>
+        </header>
+
+        <div class="memory-grid">
+          <div class="memory-copy reveal">
+            <p class="drop-cap">长征，是中国共产党和中国工农红军在极端困难条件下完成的一次战略转移。它不是一条被预先画好的直线，而是在围追堵截、雪山草地与不断选择中，一步一步走出来的生路。</p>
+            <p>当我们回望这段历史，看到的不只是行军里程与战斗数字，也看到许多普通年轻人把个人的命运，放进了民族存亡的更大命题里。</p>
+            <button class="text-link" type="button" data-target="chapter-2">他们为什么出发 <i>→</i></button>
+          </div>
+          <div class="memory-collage reveal" aria-label="长征主题画作">
+            <figure class="memory-photo memory-photo--main">
+              <img loading="lazy" decoding="async" src="assets/ch1-firelight.jpg" alt="长征主题画作：篝火夜话">
+              <figcaption>长征组画 · 篝火夜话</figcaption>
+            </figure>
+            <figure class="memory-photo memory-photo--small">
+              <img loading="lazy" decoding="async" src="assets/ch1-people.jpg" alt="长征主题画作：军民鱼水情">
+              <figcaption>军民鱼水情</figcaption>
+            </figure>
+            <span class="memory-stamp">1934<br>1936</span>
+          </div>
+        </div>
+
+        <div class="year-lab reveal">
+          <div class="year-lab__top">
+            <div>
+              <p class="eyebrow">THREE YEARS · 三个切面</p>
+              <h3>点一个年份，读一页历史</h3>
+            </div>
+            <div class="year-tabs" role="tablist" aria-label="选择年份">
+              <button class="is-active" type="button" role="tab" aria-selected="true" data-year="1934">1934</button>
+              <button type="button" role="tab" aria-selected="false" data-year="1935">1935</button>
+              <button type="button" role="tab" aria-selected="false" data-year="1936">1936</button>
+            </div>
+          </div>
+          <div class="year-panel" aria-live="polite">
+            <div class="year-panel__visual">
+              <img id="yearImage" src="assets/ch1-zunyi.jpg" alt="遵义会议主题画作">
+              <span id="yearIndex">01 / 03</span>
+            </div>
+            <div class="year-panel__copy">
+              <p class="year-panel__month" id="yearMonth">1934 · 秋</p>
+              <h4 id="yearTitle">告别中央苏区</h4>
+              <p id="yearText">第五次反“围剿”失利后，中央红军主力于 1934 年 10 月从中央苏区出发，开始战略转移。于都河畔，成为许多人记忆里的起点。</p>
+              <blockquote id="yearQuote">“出发时，没有人知道这条路会有多长。”</blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="return-interlude reveal">
+          <figure>
+            <img loading="lazy" decoding="async" src="assets/ch1-grassland.jpg" alt="长征主题画作：走出草地">
+            <figcaption>走出草地 · 历史题材画作</figcaption>
+          </figure>
+          <div>
+            <p class="interlude-mark">“</p>
+            <p>雪山、草地、饥饿与追兵，把“走完”本身变成一种意志。回望不是停在苦难里，而是看见苦难之后，队伍为什么仍然向前。</p>
+          </div>
+        </div>
+
+        <div class="torch-card reveal">
+          <button class="torch" id="torchButton" type="button" aria-pressed="false" aria-label="点亮火炬">
+            <span class="torch__flame"></span>
+            <span class="torch__stick"></span>
+          </button>
+          <div>
+            <p class="eyebrow">LIGHT THE EMBER · 点亮火种</p>
+            <h3 id="torchTitle">轻触，点亮一束火</h3>
+            <p id="torchText">历史已经远去，但精神仍有温度。点亮火炬，走向下一章。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-origin" id="chapter-2" data-chapter="2" data-label="02 · 为什么出发" aria-labelledby="title-2">
+      <div class="chapter-number" aria-hidden="true">02</div>
+      <div class="shell">
+        <header class="chapter-head reveal">
+          <p class="eyebrow">WHY THEY SET OUT</p>
+          <h2 class="chapter-title" id="title-2">为什么出发？</h2>
+          <p class="chapter-lead">把时间拨回 1933 年。一次失利、一次选择、一次告别，构成了远征的起点。点击左侧节点，翻开三段历史现场。</p>
+        </header>
+
+        <div class="origin-stage reveal">
+          <div class="origin-tabs" role="tablist" aria-label="历史背景节点">
+            <button class="is-active" type="button" role="tab" aria-selected="true" data-cause="0">
+              <small>1933.9 — 1934.夏</small>
+              <b>严峻考验</b>
+              <span>中央苏区告急</span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-cause="1">
+              <small>1934.10</small>
+              <b>战略转移</b>
+              <span>踏上远征</span>
+            </button>
+            <button type="button" role="tab" aria-selected="false" data-cause="2">
+              <small>1935.1 — 1936.10</small>
+              <b>走向会师</b>
+              <span>转折与胜利</span>
+            </button>
+          </div>
+          <article class="origin-figure">
+            <div class="origin-figure__image">
+              <img id="originImage" src="assets/ch1-grassland.jpg" alt="长征主题历史画作">
+              <span class="archive-tag" id="originTag">历史现场 · 1934</span>
+            </div>
+            <div class="origin-figure__copy">
+              <p class="origin-index" id="originIndex">节点 01 / 03</p>
+              <h3 id="originTitle">第五次反“围剿”失利</h3>
+              <p id="originText">1933 年下半年起，中央苏区在第五次反“围剿”中陷入被动。根据地空间不断被压缩，红军面临必须突围的严峻局面。</p>
+              <p class="origin-detail" id="originDetail">战略转移不是主动选择的一次远行，而是在生存危机中寻找新的可能。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="fact-strip reveal" aria-label="长征基本信息">
+          <div><b>约2.5万里</b><span>中央红军长征行程</span></div>
+          <div><b>11省</b><span>穿越的省份</span></div>
+          <div><b>24个月</b><span>1934.10—1936.10</span></div>
+          <div><b>三大主力</b><span>1936年会师</span></div>
+        </div>
+
+        <div class="origin-bridge reveal">
+          <p>从“为什么出发”，到“怎样走过来”。</p>
+          <button type="button" data-target="chapter-3">打开长征路线 <i>↓</i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-route" id="chapter-3" data-chapter="3" data-label="03 · 二万五千里" aria-labelledby="title-3">
+      <div class="chapter-number chapter-number--dark" aria-hidden="true">03</div>
+      <div class="shell">
+        <header class="chapter-head reveal">
+          <p class="eyebrow">THE LONG MARCH ATLAS</p>
+          <h2 class="chapter-title" id="title-3">二万五千里，<br>向死而生</h2>
+          <p class="chapter-lead">一条朱红行军线，穿过湘江、赤水、金沙江、雪山与草地。点击地图上的光点，或沿下方时间轴逐站前行。</p>
+        </header>
+
+        <div class="route-metrics reveal">
+          <div><b>8.6万</b><span>中央红军出发时</span></div>
+          <span class="route-metrics__arrow">→</span>
+          <div><b>约7000</b><span>抵达陕北时</span></div>
+          <div class="route-metrics__mileage"><b>2.5万</b><span>里 · 一条不能回头的路</span></div>
+        </div>
+
+        <div class="route-workbench reveal">
+          <div class="route-map-panel">
+            <div class="map-heading">
+              <span>中央红军长征路线示意图</span>
+              <small>点击节点探索</small>
+            </div>
+            <div class="route-map" id="routeMap">
+              <svg viewBox="0 0 600 720" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                    <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <pattern id="mapGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M30 0H0V30" fill="none" stroke="rgba(77,58,39,.08)" stroke-width=".7"/>
+                  </pattern>
+                </defs>
+                <rect width="600" height="720" fill="url(#mapGrid)"/>
+                <g class="map-contours" fill="none" stroke="#9f8968" stroke-width="1.2">
+                  <path d="M-20 600C80 530 130 570 205 500S340 390 420 330 510 260 640 170"/>
+                  <path d="M-30 650C70 570 135 610 210 535S335 430 430 360 525 290 640 220"/>
+                  <path d="M-30 550C70 500 115 525 190 465S325 340 395 285 470 230 620 120"/>
+                  <path d="M45 690C125 610 170 640 250 570S370 460 445 410 545 325 620 290"/>
+                  <path d="M10 440C90 390 155 430 220 360S310 260 390 215 500 170 620 70"/>
+                </g>
+                <g class="map-rivers" fill="none" stroke="#8b9e9f" stroke-width="2.2" opacity=".4">
+                  <path d="M35 120C115 150 90 230 170 245S260 185 326 225 390 320 470 345 545 440 610 430"/>
+                  <path d="M440 0C420 90 490 135 455 230S390 330 420 420 530 495 520 610 550 690 600 720"/>
+                </g>
+                <path class="route-path route-path--ghost" d="M505 625C475 605 455 595 426 572C397 548 383 529 354 515C334 551 354 576 326 599C292 568 276 526 257 489C243 469 240 450 234 431C219 399 209 369 201 340C190 302 177 281 169 252C158 207 135 179 99 146"/>
+                <path class="route-path route-path--base" d="M505 625C475 605 455 595 426 572C397 548 383 529 354 515C334 551 354 576 326 599C292 568 276 526 257 489C243 469 240 450 234 431C219 399 209 369 201 340C190 302 177 281 169 252C158 207 135 179 99 146"/>
+                <path class="route-path route-path--live" id="routePathLive" pathLength="100" d="M505 625C475 605 455 595 426 572C397 548 383 529 354 515C334 551 354 576 326 599C292 568 276 526 257 489C243 469 240 450 234 431C219 399 209 369 201 340C190 302 177 281 169 252C158 207 135 179 99 146"/>
+                <g class="map-location" aria-hidden="true">
+                  <text x="478" y="682">瑞金 · 于都</text>
+                  <text x="72" y="123">陕北 · 吴起镇</text>
+                </g>
+              </svg>
+              <div class="route-nodes" id="routeNodes"></div>
+              <div class="map-compass" aria-hidden="true"><b>N</b><i></i></div>
+              <div class="map-legend" aria-hidden="true"><i></i><span>中央红军行军线</span></div>
+            </div>
+          </div>
+
+          <article class="route-story" aria-live="polite">
+            <div class="route-story__image-wrap">
+              <img id="routeImage" src="assets/route-01-ruijin.jpg" alt="瑞金出发历史图片">
+              <div class="route-story__shade"></div>
+              <span class="route-story__counter" id="routeCounter">01 / 11</span>
+              <span class="route-story__place" id="routePlaceShort">瑞金 · 于都</span>
+            </div>
+            <div class="route-story__body">
+              <div class="route-story__meta">
+                <span id="routeTime">1934.10</span>
+                <i></i>
+                <span>中央红军长征路线</span>
+              </div>
+              <h3 id="routeTitle">星火启程</h3>
+              <p class="route-story__lead" id="routeLead">中央红军主力 8.6 万余人从瑞金、于都集结渡河，战略转移开始。</p>
+              <p id="routeText">夜色里，于都河上的浮桥连起队伍的去路。出发的人群中，有年轻战士，也有机关人员和随军家属。那一刻，没有人知道前方是两万五千里的山河。</p>
+              <blockquote id="routeQuote">“他们走过的不只是路，是一个民族最难的拐点。”</blockquote>
+              <div class="route-story__nav">
+                <button type="button" id="routePrev" aria-label="上一站">← 上一站</button>
+                <button type="button" id="routeNext" aria-label="下一站">下一站 →</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="route-sequence reveal" id="routeSequence" aria-label="路线站点快速切换"></div>
+
+        <figure class="route-banner reveal">
+          <img loading="lazy" decoding="async" src="assets/route-07-luding.jpg" alt="飞夺泸定桥历史图片">
+          <figcaption>
+            <span>飞夺泸定桥 · 1935.05.29</span>
+            <p>铁索不会因为恐惧而变宽。历史照片留下来的，是一条需要有人先走过去的桥。</p>
+          </figcaption>
+        </figure>
+
+        <div class="route-ending reveal">
+          <p class="eyebrow">THE ROAD LEAVES THE MAP</p>
+          <h3>地图有终点，精神没有。</h3>
+          <p>1936 年 10 月，红军三大主力胜利会师。长征在会宁与将台堡画上句号，但它关于理想、意志与人民的故事，才刚刚开始被后来的人接续。</p>
+          <button class="primary-button primary-button--dark" type="button" data-target="chapter-4">继续前进：他们是谁 <i>→</i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-soldiers" id="chapter-4" data-chapter="4" data-label="04 · 战士画像" aria-labelledby="title-4">
+      <div class="chapter-number" aria-hidden="true">04</div>
+      <div class="shell">
+        <header class="chapter-head reveal">
+          <p class="eyebrow">PORTRAITS OF THE COLUMN</p>
+          <h2 class="chapter-title" id="title-4">他们中的大多数，<br>没有留下名字。</h2>
+          <p class="chapter-lead">一支队伍由数字构成，也由一个个年轻的人构成。先看人数的变化，再看队伍里的少年、女性与无名者。</p>
+        </header>
+
+        <div class="scale-story reveal">
+          <div class="scale-story__numbers">
+            <div><b>20.6<span>万余</span></b><small>四路红军出发时</small></div>
+            <div class="scale-line"><i></i><span>队伍在减员、整编与补充中前行</span></div>
+            <div><b>5.7<span>万余</span></b><small>长征结束时保留</small></div>
+          </div>
+          <p>20.6 万余与 5.7 万余，不是同一时点上的简单相减。沿途补充兵员约 1.7 万至 2 万人，差异并不等于牺牲人数。但这支队伍承受的巨大代价，仍然藏在每一个缩减后的数字里。</p>
+        </div>
+
+        <div class="unknown-board reveal">
+          <div class="unknown-board__copy">
+            <p class="eyebrow">AN UNKNOWN LIGHT</p>
+            <h3>点亮一个名字之外的人</h3>
+            <p>能留下照片和姓名的人是少数。更多的战士，只留下“红军”这个共同的名字。</p>
+            <button class="text-link text-link--light" id="lightUnknown" type="button">点亮一束微光 <i>＋</i></button>
+          </div>
+          <div class="dot-field" id="dotField" aria-label="无名战士光点，点击可点亮"></div>
+        </div>
+
+        <div class="army-archive reveal">
+          <div class="army-archive__head">
+            <div>
+              <p class="eyebrow">FOUR COLUMNS · 四路红军</p>
+              <h3>四段不同的路，同一个方向</h3>
+            </div>
+            <div class="army-tabs" id="armyTabs" role="tablist" aria-label="选择红军部队"></div>
+          </div>
+          <article class="army-card" aria-live="polite">
+            <div class="army-card__photo">
+              <img id="armyPhoto" src="assets/soldiers-four.jpg" alt="红军战士历史合影">
+              <span>史料照片 · 课程作业内部展示</span>
+            </div>
+            <div class="army-card__copy">
+              <p id="armyIndex">档案 01 / 04</p>
+              <h4 id="armyName">中央红军</h4>
+              <div class="army-counts">
+                <div><small>出发</small><b id="armyStart">8.6万余</b><span id="armyStartAt">1934.10 于都</span></div>
+                <i>→</i>
+                <div><small>抵达 / 会师</small><b id="armyEnd">不足8000</b><span id="armyEndAt">1935.10 吴起镇</span></div>
+              </div>
+              <p id="armyNote">中央红军主力及中央、军委机关从于都河以北地区集结出发。湘江战役后减至 3 万余人，1935 年 10 月抵达陕北吴起镇时仅 7000 余人。</p>
+              <small class="source-note">四支部队统计节点不同，不宜作同一时点的横向比较。</small>
+            </div>
+          </article>
+        </div>
+
+        <div class="youth-profile reveal">
+          <div class="youth-profile__photo">
+            <img loading="lazy" decoding="async" src="assets/soldier-young.jpg" alt="青年红军战士历史照片">
+            <span>史料照片</span>
+          </div>
+          <div class="youth-profile__copy">
+            <p class="eyebrow">THE YOUNGEST GENERATION</p>
+            <h3>他们大多不到二十岁</h3>
+            <div class="age-stats">
+              <p><b>不足20岁</b><span>战斗员平均年龄</span></p>
+              <p><b>至少40%</b><span>14—18岁战士占比</span></p>
+              <p><b>不足25岁</b><span>指挥员平均年龄</span></p>
+            </div>
+            <div class="age-slider">
+              <label for="ageRange">如果把一个 <b id="ageValue">18</b> 岁的人放进这支队伍</label>
+              <input id="ageRange" type="range" min="14" max="30" value="18" step="1">
+              <div class="age-slider__ticks"><span>14</span><span>18</span><span>20</span><span>25</span><span>30</span></div>
+              <p id="ageNote">14—18 岁战士至少占 40%。</p>
+              <small>年龄数据为纪实性估算，保留“不足”“至少”等限定词。</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="women-glance reveal">
+          <img loading="lazy" decoding="async" src="assets/soldiers-women.jpg" alt="四位女红军历史合影">
+          <div>
+            <p class="eyebrow">SHE WAS THERE TOO</p>
+            <h3>队伍里，也有她们。</h3>
+            <p>女红军既包括战斗员，也包括干部、医护、宣传与后勤人员。她们的年龄、岗位与经历各不相同，却用各自的方式走完了同一条路。</p>
+            <button class="text-link" type="button" data-target="chapter-5">走近她们的长征 <i>→</i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-women" id="chapter-5" data-chapter="5" data-label="05 · 她们的长征" aria-labelledby="title-5">
+      <div class="chapter-number" aria-hidden="true">05</div>
+      <div class="shell">
+        <header class="chapter-head reveal">
+          <p class="eyebrow">HER LONG MARCH</p>
+          <h2 class="chapter-title" id="title-5">她们的长征</h2>
+          <p class="chapter-lead">从雪山、担架与歌声出发，走近六位女红军。彩色画面为 AI 情景再现，历史照片与情景画面在版式中明确区分。</p>
+        </header>
+
+        <div class="women-intro reveal">
+          <img loading="lazy" decoding="async" src="assets/women-intro.webp" alt="四位红军战士AI情景合影">
+          <div class="women-intro__caption">
+            <span>专题 · 05</span>
+            <p>AI 情景再现 · 非历史现场</p>
+          </div>
+          <blockquote>在枪火、病痛、饥饿与风雪之间，她们从未只做旁观者。</blockquote>
+        </div>
+
+        <div class="women-stage reveal">
+          <div class="women-tabs" id="womenTabs" role="tablist" aria-label="选择女红军人物"></div>
+          <article class="woman-card" aria-live="polite">
+            <div class="woman-scene">
+              <img id="womanScene" src="assets/woman-kang.webp" alt="康克清翻越雪山情景再现">
+              <div class="woman-scene__label"><span>AI 情景再现</span><i></i></div>
+              <div class="woman-scene__verb" id="womanVerb">越</div>
+              <div class="woman-portrait">
+                <img id="womanPortrait" src="assets/portrait-kang.webp" alt="康克清历史照片">
+                <span>历史照片</span>
+              </div>
+            </div>
+            <div class="woman-copy">
+              <div class="woman-copy__kicker">
+                <span id="womanIndex">人物档案 01 / 06</span>
+                <small id="womanAction">三次翻越雪山</small>
+              </div>
+              <h3 id="womanTitle">她把雪山，当成一段路</h3>
+              <p class="woman-quote" id="womanQuote">“就像在野外散步一样。” —— 康克清回忆长征</p>
+              <p id="womanSummary">作为直属队指导员，她随红军三大主力行动，三次翻越雪山，走完整整两年的长征。别人眼中的极限，被她轻声说成“散步”。</p>
+              <details>
+                <summary>展开人物故事 <i>＋</i></summary>
+                <p id="womanStory">康克清出生于江西省万安县罗塘湾的一个贫苦渔家。队伍翻雪山时，她不是被照顾的对象，而是直属队指导员。她随红军三大主力行动，走完长征全过程，三次翻越雪山，历时整整两年，比红一方面军其他女红军多走了一年。后来她回忆长征，却说“就像在野外散步一样”。一句轻描淡写，背后是整整两年的枪林弹雨与雪山草地。</p>
+              </details>
+              <div class="woman-copy__nav">
+                <button type="button" id="womanPrev">← 上一位</button>
+                <span id="womanDots">01 / 06</span>
+                <button type="button" id="womanNext">下一位 →</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="women-coda reveal">
+          <div>
+            <p class="eyebrow">NAMES · AND THE UNNAMED</p>
+            <h3>她们的名字，和千万个没有留下名字的“她”一起，构成长征不可省略的一部分。</h3>
+          </div>
+          <img loading="lazy" decoding="async" src="assets/women-group.webp" alt="长征中的女红军历史合影">
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-modern" id="chapter-6" data-chapter="6" data-label="06 · 当代长征" aria-labelledby="title-6">
+      <div class="chapter-number" aria-hidden="true">06</div>
+      <div class="shell">
+        <header class="chapter-head reveal">
+          <p class="eyebrow">THE SPIRIT CONTINUES</p>
+          <h2 class="chapter-title" id="title-6">长征精神，<br>走到了今天。</h2>
+          <p class="chapter-lead">当视线从地图上抬起来，会发现新的“雪山草地”换了模样：荒原、病毒、技术难关，也可能是我们每个人想放弃的那一刻。</p>
+        </header>
+
+        <div class="spirit-deck reveal" id="spiritDeck" aria-label="长征精神关键词"></div>
+
+        <div class="modern-divider reveal">
+          <span>当代样本 一</span>
+          <h3>塞罕坝：把“不可能”种进荒原</h3>
+          <p>1962 年，369 名年轻人上坝，平均年龄不到 24 岁。三代人用 60 多年，把 1 棵树变成 115 万亩人工林。</p>
+        </div>
+
+        <div class="compare-card reveal" id="compareCard">
+          <div class="compare-card__visual" id="compareVisual">
+            <img class="compare-after" src="assets/saihanba-after.jpg" alt="塞罕坝今日林海">
+            <div class="compare-before">
+              <img loading="lazy" decoding="async" src="assets/saihanba-before.jpg" alt="塞罕坝早期荒原">
+            </div>
+            <span class="compare-label compare-label--before">1962 · 荒原</span>
+            <span class="compare-label compare-label--after">今天 · 林海</span>
+            <div class="compare-handle"><i></i><span>拖动</span></div>
+          </div>
+          <input id="compareRange" type="range" min="0" max="100" value="48" aria-label="拖动比较塞罕坝前后">
+          <div class="compare-card__facts">
+            <div><b>115万亩</b><span>人工林</span></div>
+            <div><b>82%</b><span>森林覆盖率</span></div>
+            <div><b>60多年</b><span>三代人接力</span></div>
+          </div>
+          <blockquote>“一日三餐有味无味无所谓，爬冰卧雪冷乎冻乎不在乎。”<small>—— 第一代务林人地窨子门上的对联</small></blockquote>
+        </div>
+
+        <div class="modern-divider reveal">
+          <span>当代样本 二</span>
+          <h3>2020 武汉：在未知中“逆行”</h3>
+          <p>不是枪林弹雨，而是在信息不完整、风险不确定的时候，仍然选择向前。点击姓名，听他们当时的那句话。</p>
+        </div>
+
+        <div class="wuhan-stage reveal">
+          <div class="wuhan-image">
+            <img id="wuhanImage" src="assets/modern-person-1.jpg" alt="钟南山">
+            <span>当代人物 · 抗疫纪实</span>
+          </div>
+          <div class="wuhan-copy">
+            <div class="wuhan-tabs" id="wuhanTabs"></div>
+            <blockquote id="wuhanQuote">“肯定存在人传人。”</blockquote>
+            <p id="wuhanStory">84 岁的钟南山在高铁餐车角落闭眼休息。几天后，他在镜头前说出“人传人”三个字。一个人面对巨大不确定性时，把真话说出来，本身就是重量。</p>
+          </div>
+        </div>
+
+        <div class="modern-cta reveal">
+          <p>塞罕坝人的长征，是把荒原变成林海；抗疫逆行者的长征，是从病毒手里抢回生命。</p>
+          <h3>而我们的长征，又是什么？</h3>
+          <button class="primary-button primary-button--dark" type="button" data-target="chapter-7">带着这个问题，继续前行 <i>↓</i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-film" id="chapter-7" data-chapter="7" data-label="07 · 精神不息" aria-labelledby="title-7">
+      <div class="chapter-number" aria-hidden="true">07</div>
+      <div class="shell">
+        <header class="chapter-head reveal">
+          <p class="eyebrow">A LEGACY IN MOTION</p>
+          <h2 class="chapter-title" id="title-7">让长征精神<br>走向未来</h2>
+          <p class="chapter-lead">几代人赓续长征精神，铸就美好明天。观看影像，完成一次属于今天的接力。</p>
+        </header>
+
+        <div class="film-frame reveal">
+          <video id="legacyVideo" preload="metadata" playsinline src="assets/legacy.mp4"></video>
+          <button class="film-cover" id="filmCover" type="button" aria-label="播放长征精神视频">
+            <span class="film-cover__play">▶</span>
+            <b>几代人赓续长征精神</b>
+            <small>点击播放 · 时长约 10 秒</small>
+          </button>
+          <div class="film-controls">
+            <button type="button" id="filmToggle">▶ 播放</button>
+            <button type="button" id="filmReplay">⟲ 重播</button>
+            <span id="filmTime">00:00</span>
+          </div>
+        </div>
+
+        <div class="spirit-words reveal" id="spiritWords" aria-label="长征精神关键词翻转卡"></div>
+
+        <div class="quiz-card reveal" id="quizCard">
+          <div class="quiz-head">
+            <span>观后一问</span>
+            <b>01 / 01</b>
+          </div>
+          <h3>红军三大主力胜利会师，长征胜利结束。会师发生在哪一年？</h3>
+          <div class="quiz-options" role="group" aria-label="选择答案">
+            <button type="button" data-answer="wrong">1935 年 1 月</button>
+            <button type="button" data-answer="right">1936 年 10 月</button>
+            <button type="button" data-answer="wrong">1934 年 10 月</button>
+          </div>
+          <p class="quiz-explain" id="quizExplain" aria-live="polite">1936 年 10 月，红军三大主力胜利会师，标志着长征胜利结束。</p>
+        </div>
+
+        <div class="film-bridge reveal">
+          <p>影像会结束，脚下的路还在继续。</p>
+          <button type="button" data-target="chapter-8">走向新长征 <i>↓</i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-finale" id="chapter-8" data-chapter="8" data-label="08 · 走好新长征" aria-labelledby="title-8">
+      <div class="chapter-number" aria-hidden="true">08</div>
+      <div class="finale-dawn" aria-hidden="true"></div>
+      <div class="finale-stars" id="finaleStars" aria-hidden="true"></div>
+      <div class="shell">
+        <header class="chapter-head chapter-head--center reveal">
+          <p class="eyebrow">YOUR LONG MARCH</p>
+          <h2 class="chapter-title" id="title-8">长征永远在路上</h2>
+          <p class="chapter-lead">你的长征，也许没有名字。它可能是把一件难而正确的事，多做一天；也可能是在想放弃的时刻，再往前走一步。</p>
+        </header>
+
+        <div class="future-photo reveal">
+          <img loading="lazy" decoding="async" src="assets/ch7-future.jpg" alt="从长征路走向现代城市的主题画面">
+          <p>从历史走来，向未来走去。</p>
+        </div>
+
+        <div class="pledge-lab reveal">
+          <div class="pledge-lab__head">
+            <div>
+              <p class="eyebrow">MAKE YOUR PLEDGE</p>
+              <h3>选一个身份，生成你的长征宣言</h3>
+            </div>
+            <button class="small-button" id="copyPledge" type="button">复制宣言</button>
+          </div>
+          <div class="role-tabs" id="roleTabs" role="tablist" aria-label="选择身份"></div>
+          <div class="pledge-output">
+            <p id="pledgeRole">学生</p>
+            <blockquote id="pledgeText">在我的长征里，把每一次认真坚持，变成走向未来的一小步。</blockquote>
+            <div class="pledge-seal">长征<br>精神</div>
+          </div>
+        </div>
+
+        <div class="word-lab reveal">
+          <p class="eyebrow">CHOOSE ONE WORD</p>
+          <h3>如果用一个词写下你的长征，你会选——</h3>
+          <div class="word-options" id="wordOptions">
+            <button type="button">坚持</button>
+            <button type="button">较真</button>
+            <button type="button">不撤</button>
+            <button type="button">守住</button>
+          </div>
+          <div class="word-result" aria-live="polite">
+            <span>我的长征关键词</span>
+            <b id="chosenWord">坚持</b>
+            <p id="wordSentence">把一件难而正确的事，多做一天。</p>
+          </div>
+        </div>
+
+        <div class="message-wall reveal">
+          <div class="message-wall__head">
+            <div>
+              <p class="eyebrow">PASS THE FIRE</p>
+              <h3>薪火接力 · 留下一句话</h3>
+            </div>
+            <span>写进接力墙，留在这次回望里</span>
+          </div>
+          <form class="message-form" id="messageForm">
+            <label class="sr-only" for="messageName">你的称呼</label>
+            <input id="messageName" maxlength="12" placeholder="你的称呼（选填）">
+            <label class="sr-only" for="messageText">你的寄语</label>
+            <textarea id="messageText" maxlength="80" rows="3" placeholder="写下你的长征寄语……" required></textarea>
+            <button type="submit">传下去 <i>→</i></button>
+          </form>
+          <div class="message-stream" id="messageStream" aria-live="polite"></div>
+        </div>
+
+        <div class="final-quote reveal">
+          <span class="final-quote__mark">“</span>
+          <blockquote>每一代人<br>有每一代人的长征路。</blockquote>
+          <p>回望，是为了更好地出发。</p>
+        </div>
+
+        <footer class="credits">
+          <p>图片均为课程作业内部展示素材。真实历史照片保留来源说明；彩色情景图像标注“AI 情景再现”，不代表历史现场影像。</p>
+          <p>数据口径参考：中央党史和文献研究院、新华社、中国军网、中国共产党新闻网、人民日报等公开党史资料。</p>
+          <button type="button" data-target="cover">再次回望 ↑</button>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">请启用 JavaScript，以体验路线、人物与互动内容。</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
